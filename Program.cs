@@ -31,15 +31,37 @@ namespace Objetos_como_argumentos
 
                 switch (opcao)
                 {
-                    case 1:
-                        //do
-                        //{
-                            
-                        //} while (true);
+                    case 1: //switch case dentro de um switch case
                         
-                        
-                        //carrinho.AdicionarProduto();
-                        break;
+                        Console.WriteLine("Digite o código do produto que você quer adicionar:");
+                        Console.WriteLine("[1] - Mouse Gamer");
+                        Console.WriteLine("[2] - MousePad");
+                        Console.WriteLine("[3] - Teclado Mecanico");
+                        Console.WriteLine("[4] - Cabo USB");
+                        int resposta = int.Parse(Console.ReadLine());
+                        switch (resposta)
+                        {
+                            case 1:
+                                carrinho.AdicionarProduto(p1);
+                                break;
+
+                            case 2:
+                                carrinho.AdicionarProduto(p2);
+                                break;
+
+                            case 3:
+                                carrinho.AdicionarProduto(p3);
+                                break;
+
+                            case 4:
+                                carrinho.AdicionarProduto(p4);
+                                break;
+
+                            default:
+                                Console.WriteLine("Resposta inválida");
+                                break;
+                        }
+                        break; //case 1
 
 
                     case 2:
@@ -48,8 +70,31 @@ namespace Objetos_como_argumentos
 
 
                     case 3:
-                        //carrinho.RemoveProduto();
-                        break;
+                        Console.WriteLine("Qual produto deseja remover: 1 - 2 - 3 - 4");
+                        int remover = int.Parse(Console.ReadLine());
+                        switch (remover)
+                        {
+                            case 1:
+                                carrinho.RemoveProduto(p1);    
+                                break;
+
+                            case 2:
+                                carrinho.RemoveProduto(p2);
+                                break;
+
+                            case 3:
+                                carrinho.RemoveProduto(p3);
+                                break;
+
+                            case 4:
+                                carrinho.RemoveProduto(p4);
+                                break;    
+
+                            default:
+                                Console.WriteLine("Remoção inválida");
+                                break;
+                        }
+                        break; //case 3
 
                     case 4:
                         carrinho.TotalCompra();
@@ -57,8 +102,9 @@ namespace Objetos_como_argumentos
 
 
                     case 5:
-                        //carrinho.AterarItem();
+                        //carrinho.AterarItem(p1.Codigo , p4);
                         break;
+
 
                     case 0:
                         //sair

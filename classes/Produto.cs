@@ -17,7 +17,7 @@ namespace Objetos_como_argumentos.classes
             this.Nome = _nome;
             this.Preco = _preco;
         }
-
+        
 
     }
 }
